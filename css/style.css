@@ -1,36 +1,52 @@
 
 h2 {
-	background-color: rgb(147, 208, 255);
+	background-color: rgb(198, 230, 255);
 }
 
+footer {
+	background-color: rgb(198, 230, 255);
+}
 body {
-	font-family: Tahoma, sans-serif;
+	font-family: 'Open Sans', sans-serif;
+}
 
-}
-#chloropleth_map {
-	height: 1000px; 
-	width: 100px;
-}
-.vis-content {
+.vis-content-container {
     align-content: center;
     width: 100%;
 }
-#line_chart {
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
+
+.vis-content-container-left-col {
+	float: left;
+	width: 50%;
+
+}
+.vis-content-container-right-col {
+	float: left;
+    width: 50%;
 }
 
-.description-text{
+.double-column{
+	width: 100%;
+	display: block;
+}
+
+
+.text-size{
 	font-size: 14px
+}
+
+.text-left-col{
+	padding-left: 20px;
+}
+
+.text-right-col{
+	padding-left: 20px;
 }
 
 .page-body {
 	padding: 5px;
     padding-top: 5px;
 	margin: 1%;
-    width: 100px;
     background-color: white;
 
 }
