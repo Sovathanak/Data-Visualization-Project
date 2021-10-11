@@ -1,14 +1,36 @@
-#chloropleth_map {
-	height: 1000px; 
-	width: 100%;
+
+h2 {
+	background-color: rgb(147, 208, 255);
 }
 
+body {
+	font-family: Tahoma, sans-serif;
+
+}
+#chloropleth_map {
+	height: 1000px; 
+	width: 100px;
+}
+.vis-content {
+    align-content: center;
+    width: 100%;
+}
 #line_chart {
 	top:100px;
 	bottom: 100px; 
 	left: 100px;
 	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
 }
 
+.description-text{
+	font-size: 14px
+}
+
+.page-body {
+	padding: 5px;
+    padding-top: 5px;
+	margin: 1%;
+    width: 100px;
+    background-color: white;
+
+}
