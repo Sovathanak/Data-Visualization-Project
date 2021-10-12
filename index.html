@@ -21,45 +21,39 @@
 <div id="page-body">
     <h2>World Population from 1950 to 2020</h2>
     <div id="chloropleth_map" class = "vis-content-container"></div>
-    <script type="text/javascript">
-        var spec2 = "js/choropleth_population_map.vg.json"
-
-        vegaEmbed('#chloropleth_map', spec2).then(function(result) {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-        }).catch(console.error);
-    </script>
     <br>
     <br>
-    <h2>Child Mortality vs Child Birth from 1950 to 2020</h2>
+    <h2></h2>
         <div id="line_chart" class = "vis-content-container">
-            <script type="text/javascript">
-                var spec2 = "js/line_chart.vg.json"
-                vegaEmbed('#line_chart', spec2).then(function(result) {
-                    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-                }).catch(console.error);
-            </script>
         </div>
     <div class = "double-column">
         <h2>Child Mortality vs Child Birth from 1950 to 2020</h2>
-        <div id="line_chart1" class = "vis-content-container-left-col">
-            <script type="text/javascript">
-                var spec2 = "js/line_chart.vg.json"
-                vegaEmbed('#line_chart1', spec2).then(function(result) {
-                    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-                }).catch(console.error);
-            </script>
-        </div>
-        <div id="line_chart2" class = "vis-content-container-right-col">
-        
-            <script type="text/javascript">
-                var spec2 = "js/line_chart.vg.json"
-                vegaEmbed('#line_chart2', spec2).then(function(result) {
-                    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-                }).catch(console.error);
-            </script>
-        </div>
+        <div id="line_chart1" class = "vis-content-container-left-col"></div>
+        <div id="line_chart2" class = "vis-content-container-right-col"></div>
     </div>
 </div>
+<script type="text/javascript">
+    var vis1 = "js/choropleth_population_map.vg.json"
+
+    vegaEmbed('#chloropleth_map', vis1).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var vis2 = "js/line_chart.vg.json"
+    vegaEmbed('#line_chart', vis2).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var vis3 = "js/line_chart.vg.json"
+    vegaEmbed('#line_chart2', vis3).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var vis4 = "js/line_chart.vg.json"
+    vegaEmbed('#line_chart1', vis4).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+</script>
 </body>
 <br>
 <br>
