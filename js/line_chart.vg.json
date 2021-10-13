@@ -14,7 +14,11 @@
   "layer":[{
     "encoding": {
       "color":{
-        "field":"Entity", "type":"nominal", "title":"Continents"
+        "field":"Entity", 
+        "type":"nominal", 
+        "title":"Continents",
+        "scale": {"range": ["#F1C40F", "#95A5A6", "#1E88E5", "#6BCCC8", "#756bb1", "#fbb4b9"]}
+
       },
       "y":{
         "field": "Population_Growth_Rate", "type":"quantitative", "title": "Population Growth %"
@@ -31,7 +35,25 @@
           }
         ],
         "mark":"line"
+      },
+           {
+    "mark": {
+      "type": "circle",
+      "align": "left",
+      "baseline": "middle",
+      "dx": -90,
+      "dy": 10
+    },
+    "encoding": {
+      "opacity": {
+        "condition": {
+          "test": "datum.Population_Growth_Rate == -0.066",
+          "value": 1
+        },
+        "value": 0
       }
+    }
+  }
        ]
      },
      {
@@ -48,8 +70,8 @@
         "condition": {
           "test": "datum.Population_Growth_Rate == -0.066",
           "value": [
-            "Europe reached global lowest population growth rate",
-            "over the course of 70 years at -0.066%"
+            "Population growth reached lowest",
+            "point in Europe with -0.066%"
           ]
         }
       },
