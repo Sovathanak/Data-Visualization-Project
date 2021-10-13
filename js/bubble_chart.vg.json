@@ -145,7 +145,7 @@
     "type": "text",
     "align": "right",
     "baseline": "middle",
-    "dx": -10,
+    "dx": -5,
     "fontSize": 12,
     "fontStyle": "italic"
     },
@@ -154,7 +154,7 @@
     "color": {"value": "black"},
     "opacity": {
     "condition": {
-    "test": "datum.Entity == 'China' || datum.Entity =='India' || datum.Entity == 'Australia' || datum.Entity == 'United Kingdom'|| datum.Entity == 'Nigeria' || datum.Entity == 'United States of America'",
+    "test": "datum.Entity == 'China' || datum.Entity =='India' || datum.Entity == 'Australia' || datum.Entity == 'United Kingdom'|| datum.Entity == 'Mali' || datum.Entity == 'United States of America'",
     "value": 1
     },
     "value": 0
