@@ -4,7 +4,7 @@
   "height": 400,
   "title": "",
   "data": {
-  "url": "https://raw.githubusercontent.com/Sovathanak/FIT3179-hw-10/master/data/grow_continent.csv"
+  "url": "https://raw.githubusercontent.com/Sovathanak/Data-Visualization-Project/master/data/grow_continent.csv"
   },
   "encoding":{
     "x":{
@@ -21,7 +21,7 @@
         "field":"Entity", 
         "type":"nominal", 
         "title":"Continents",
-        "scale": {"range": ["#F1C40F", "#95A5A6", "#1E88E5", "#6BCCC8", "#756bb1", "#fbb4b9", "#ff0000"]}
+        "scale": {"range": ["#F1C40F", "#95A5A6", "#ff0000", "#1E88E5", "#6BCCC8", "#756bb1", "#fbb4b9"]}
 
       },
       "y":{

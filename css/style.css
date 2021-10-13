@@ -32,13 +32,26 @@ h1 {
 
 .vis-content-container-left-col {
 	float: left;
-	width: 50%;
+	width: 65%;
 
 }
+
+.text-right {
+	float: left;
+	width: 35%;	
+}
+
+.text-left {
+	float: left;
+	width: 35%;	
+}
+
+
 .vis-content-container-right-col {
 	float: left;
-    width: 50%;
+    width: 65%;
 }
+
 
 .title-left-col {
 	float: left;
