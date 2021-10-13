@@ -22,18 +22,18 @@
     <div id="chloropleth_map" class = "vis-content-container"></div>
     <br>
     <br>
-    <h2>Population Growth </h2>
-        <div id="line_chart" class = "vis-content-container">
+    <h2>Child Mortality vs Child Birth from 1950 to 2020</h2>
+        <div id="bubble_chart" class = "vis-content-container">
         </div>
     <div class = "double-column">
     <div class = "title-left-col">
-        <h2>Child Mortality vs Child Birth from 1950 to 2020</h2>
-        <div id="line_chart1" class = "vis-content-container"></div>
+        <h2>Population Growth</h2>
+        <div id="line_chart" class = "vis-content-container"></div>
         </div>
 
         <div class = "title-right-col">
         <h2>Child Mortality vs Child Birth from 1950 to 2020</h2>
-        <div id="line_chart2" class = "vis-content-container"></div>
+        <div id="line_chart1" class = "vis-content-container"></div>
         </div>
     </div>
 <script type="text/javascript">
@@ -43,13 +43,13 @@
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    var vis2 = "js/line_chart.vg.json"
-    vegaEmbed('#line_chart', vis2).then(function(result) {
+    var vis2 = "js/bubble_chart.vg.json"
+    vegaEmbed('#bubble_chart', vis2).then(function(result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
     var vis3 = "js/line_chart.vg.json"
-    vegaEmbed('#line_chart2', vis3).then(function(result) {
+    vegaEmbed('#line_chart', vis3).then(function(result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
