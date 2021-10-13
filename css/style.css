@@ -27,9 +27,19 @@ body {
     width: 50%;
 }
 
+.title-left-col {
+	float: left;
+	width: 48%;
+
+}
+.title-right-col {
+	float: right;
+    width: 48%;
+}
+
 .double-column{
 	width: 100%;
-	display: block;
+	display: inline-block;
 }
 
 
