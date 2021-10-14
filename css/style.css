@@ -18,7 +18,7 @@ h1 {
 }
 
 .description-right {
-    padding-left: 20px;
+    padding-left: 0px;
 }
 
 .description-left {
@@ -44,12 +44,6 @@ h1 {
 .text-left {
 	float: left;
 	width: 35%;	
-}
-
-
-.vis-content-container-right-col {
-	float: left;
-    width: 65%;
 }
 
 

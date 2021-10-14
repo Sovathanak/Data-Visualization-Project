@@ -68,6 +68,7 @@
       "color": {
       "field": "Continent",
       "type": "nominal",
+      "legend":{"orient": "bottom"},
       "scale": {
       "domain": [
       "Africa",
