@@ -56,7 +56,6 @@
     "name": "Continent Selection: "
     }
     }
-   
     ],
     "transform": [
     {"filter": "datum.Birth > 0"},
@@ -70,19 +69,19 @@
      "as": "Child Mortality per 10,000"}
     ],
     "encoding": {
-    "y": {
-    "field": "Child Birth per 10,000",
-    "type": "quantitative",
-    "title": "Child Birth per 10,000",
-    "axis": {"tickCount": 3, "grid": false},
-    "scale": {"type": "log", "domain": [1, 1000]}
-    },
     "x": {
-    "field": "Child Mortality per 10,000",
-    "type": "quantitative",
-    "axis": {"tickCount": 3, "grid": false},
-     "title": "Child Mortality per 10,000",
-    "scale": {"type": "log", "domain": [1, 1000]}
+        "field": "Child Mortality per 10,000",
+        "type": "quantitative",
+        "axis": {"tickCount": 3, "grid": false},
+            "title": "Child Mortality per 10,000",
+        "scale": {"type": "log", "domain": [1, 1000]}
+        },
+    "y": {
+        "field": "Child Birth per 10,000",
+        "type": "quantitative",
+        "title": "Child Birth per 10,000",
+        "axis": {"tickCount": 3, "grid": false},
+        "scale": {"type": "log", "domain": [1, 1000]}
     }
     },
     "layer": [

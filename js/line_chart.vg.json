@@ -4,120 +4,172 @@
   "height": 400,
   "title": "",
   "data": {
-  "url": "https://raw.githubusercontent.com/Sovathanak/Data-Visualization-Project/master/data/grow_continent.csv"
+"url": "https://raw.githubusercontent.com/Sovathanak/Data-Visualization-Project/master/data/grow_continent.csv"
   },
-  "encoding":{
-    "x":{
-      "field":"Year", 
-      "type": "temporal",
-      "axis":{
-          "grid":false
-      }
-    }
-  },
-  "layer":[{
-    "encoding": {
-      "color":{
-        "field":"Entity", 
-        "type":"nominal", 
-        "title":"Continents",
-        "scale": {"range": ["#F1C40F", "#95A5A6", "#ff0000", "#1E88E5", "#6BCCC8", "#756bb1", "#fbb4b9"]}
-
-      },
-      "y":{
-        "field": "Population_Growth_Rate", "type":"quantitative", "title": "Population Growth %"
-      }
-    },
-    "layer": [
-      {
-        "mark":"line"
-      },
-      {
-        "transform": [
-          {
-            "filter":{"param":"hover", "empty": false}
-          }
-        ],
-        "mark":"circle"
-      },
-           {
-    "mark": {
-      "type": "circle",
-      "align": "left",
-      "baseline": "middle",
-      "dx": -90,
-      "dy": 10
-    },
-    "encoding": {
-      "opacity": {
-        "condition": {
-          "test": "datum.Population_Growth_Rate == -0.066",
-          "value": 1
-        },
-        "value": 0
-      }
+  "params": [
+  {
+  "name": "Continent_selection",
+  "bind": {
+  "input": "select",
+  "options": [
+  null,
+  "Africa",
+  "Asia",
+  "Average",
+  "Europe",
+  "North America",
+  "Oceania",
+  "South America"
+  ],
+  "labels":[
+  "Show All",
+  "Africa",
+  "Asia",
+  "Average",
+  "Europe",
+  "North America",
+  "Oceania",
+  "South America"
+  ],
+  "name": "Continent Selection: "
+  }
+  }
+  ],
+  "transform": [
+  {"filter": "Continent_selection == null || datum.Entity == Continent_selection"}
+  ],
+"encoding":{
+  "x":{
+    "field":"Year", 
+    "type": "temporal",
+    "axis":{
+        "grid":false
     }
   }
-       ]
-     },
-     {
-    "mark": {
-      "type": "text",
-      "align": "left",
-      "baseline": "middle",
-      "dx": -90,
-      "dy": 160
+},
+    "layer":[{
+  "encoding": {
+    "color":{
+      "field":"Entity", 
+      "type":"nominal", 
+      "title":"Continents",
+      "scale": {"range": ["#F1C40F", "#95A5A6", "#ff0000", "#1E88E5", "#6BCCC8", "#756bb1", "#fbb4b9"]}
+
     },
-    "encoding": {
-      "text": {
-        "field": "Year",
-        "condition": {
-          "test": "datum.Population_Growth_Rate == -0.066",
-          "value": [
-            "Population growth reached lowest",
-            "point in Europe with -0.066%"
-          ]
-        }
-      },
-      "opacity": {
-        "condition": {
-          "test": "datum.Population_Growth_Rate == -0.066",
-          "value": 1
-        },
-        "value": 0
-      }
+    "y":{
+      "field": "Population_Growth_Rate", "type":"quantitative", "title": "Population Growth %",
+    "scale": {"type": "linear", "domain": [-1, 3]}
+
     }
   },
-     {
-       "transform": [{"pivot": "Entity", "value": "Population_Growth_Rate", "groupby": ["Year"]}],
-       "mark": "rule",
-       "encoding": {
-         "opacity": {
-           "condition": {"value": 0.3, "param": "hover", "empty": false},
-           "value": 0
-         },
-         "tooltip": [
-           {"field": "Africa", "type": "quantitative"},
-           {"field": "Asia", "type": "quantitative"},
-           {"field": "Europe", "type": "quantitative"},
-           {"field": "Northern America", "type": "quantitative"},
-           {"field": "Oceania", "type": "quantitative"},
-           {"field": "South America", "type": "quantitative"},
-           {"field": "Average", "type": "quantitative"},
-           {"field": "Year", "timeUnit": "year","type": "temporal", "title": "Year"}
-         ]
+  "layer": [
+    {"mark":"circle",
+    "encoding":{
+      "color": {
+      "field": "Continent",
+      "type": "nominal",
+      "scale": {
+      "domain": [
+      "Africa",
+      "Asia",
+      "Average",
+      "Europe",
+      "North America",
+      "Oceania",
+      "South America"
+      ],
+      "range": ["#F1C40F", "#95A5A6", "#ff0000", "#1E88E5", "#6BCCC8", "#756bb1", "#fbb4b9"]
+      }
+      }}},
+
+    {
+      "mark":"line"
+    },
+    {
+      "transform": [
+        {
+          "filter":{"param":"hover", "empty": false}
+        }
+      ],
+      "mark":"circle"
+    },
+         {
+  "mark": {
+    "type": "circle",
+    "align": "left",
+    "baseline": "middle",
+    "dx": -90,
+    "dy": 10
+  },
+  "encoding": {
+    "opacity": {
+      "condition": {
+        "test": "datum.Population_Growth_Rate == -0.066",
+        "value": 1
+      },
+      "value": 0
+    }
+  }
+}
+     ]
+   },
+   {
+  "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "dx": -90,
+    "dy": 120
+  },
+  "encoding": {
+    "text": {
+      "field": "Year",
+      "condition": {
+        "test": "datum.Population_Growth_Rate == -0.066",
+        "value": [
+          "Population growth reached lowest",
+          "point in Europe with -0.066%"
+        ]
+      }
+    },
+    "opacity": {
+      "condition": {
+        "test": "datum.Population_Growth_Rate == -0.066",
+        "value": 1
+      },
+      "value": 0
+    }
+  }
+},
+   {
+     "transform": [{"pivot": "Entity", "value": "Population_Growth_Rate", "groupby": ["Year"]}],
+     "mark": "rule",
+     "encoding": {
+       "opacity": {
+         "condition": {"value": 0.3, "param": "hover", "empty": false},
+         "value": 0
        },
-       "params": [{
-         "name": "hover",
-         "select": {
-           "type": "point",
-           "fields": ["Year"],
-           "nearest": true,
-           "on": "mouseover",
-           "clear": "mouseout"
-         }
-       }]
-     }
-   ]
+       "tooltip": [
+         {"field": "Africa", "type": "quantitative"},
+         {"field": "Asia", "type": "quantitative"},
+         {"field": "Europe", "type": "quantitative"},
+         {"field": "North America", "type": "quantitative"},
+         {"field": "Oceania", "type": "quantitative"},
+         {"field": "South America", "type": "quantitative"},
+         {"field": "Average", "type": "quantitative", "format": ".2f"},
+         {"field": "Year", "timeUnit": "year","type": "temporal", "title": "Year"}
+       ]
+     },
+     "params": [{
+       "name": "hover",
+       "select": {
+         "type": "point",
+         "fields": ["Year"],
+         "nearest": true,
+         "on": "mouseover",
+         "clear": "mouseout"
+       }
+     }]
+   }
+ ]
  }
- 
