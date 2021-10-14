@@ -70,10 +70,10 @@
         </div>
 
         <div class = "title-right-col description-right">
-        <h2>Child Mortality vs Child Birth from 1950 to 2020</h2>
+        <h2>World Age Range</h2>
         <p>qwdqwdqwdwqqwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
         wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</p>
-        <div id="line_chart1" class = "vis-content-container"></div>
+        <div id="area_chart" class = "vis-content-container"></div>
         </div>
     </div>
 <script type="text/javascript">
@@ -93,8 +93,8 @@
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    var vis4 = "js/line_chart.vg.json"
-    vegaEmbed('#line_chart1', vis4, {"actions": false}).then(function(result) {
+    var vis4 = "js/area_chart.vg.json"
+    vegaEmbed('#area_chart', vis4, {"actions": false}).then(function(result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 </script>
