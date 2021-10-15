@@ -154,7 +154,7 @@
     "color": {"value": "black"},
     "opacity": {
     "condition": {
-    "test": "datum.Entity == 'China' || datum.Entity =='India' || datum.Entity == 'Australia' || datum.Entity == 'United Kingdom'|| datum.Entity == 'Mali' || datum.Entity == 'United States of America'",
+    "test": "datum.Entity == 'China' || datum.Entity =='India' || datum.Entity == 'Australia' || datum.Entity == 'Germany'|| datum.Entity == 'Mali' || datum.Entity == 'Canada'",
     "value": 1
     },
     "value": 0
