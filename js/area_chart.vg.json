@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
-  "width": "container", "height": 400,
+  "width": "container", "height": 300,
   "data": {"url": "https://raw.githubusercontent.com/Sovathanak/Data-Visualization-Project/master/data/broad_age_world.csv"},
   "mark": {
       "type":"area",
