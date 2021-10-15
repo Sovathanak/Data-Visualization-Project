@@ -5,11 +5,21 @@ h2 {
 
 
 body {
-	font-family: 'Open Sans', sans-serif;
+	background-color: lightgray;
+}
+.page-border {
 	width: 80%;
+	background-color: white;
 	margin-left:auto;
 	margin-right:auto;
+	font-family: 'Open Sans', sans-serif;
 
+}
+.page{
+	background-color: white;
+	width: 90%;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 .description h2,
@@ -18,11 +28,11 @@ h1 {
 }
 
 .description-right {
-    padding-left: 0px;
+    padding-left: 20px;
 }
 
 .description-left {
-    padding-right: 20px;
+    padding-right: 5px;
 }
 
 .vis-content-container {
@@ -32,18 +42,20 @@ h1 {
 
 .vis-content-container-left-col {
 	float: left;
-	width: 65%;
+	width: 60%;
 
 }
 
 .text-right {
 	float: left;
-	width: 35%;	
+	width: 40%;	
+	padding-right: 0px;
+
 }
 
 .text-left {
 	float: left;
-	width: 35%;	
+	width: 40%;	
 }
 
 
@@ -60,4 +72,9 @@ h1 {
 .double-column{
 	width: 100%;
 	display: inline-block;
+}
+
+.footer{
+	padding-bottom: 20px;
+	padding-left: 60px
 }
