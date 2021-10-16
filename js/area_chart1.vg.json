@@ -8,9 +8,12 @@
     "from":{
     "data":{"url": "https://raw.githubusercontent.com/Sovathanak/Data-Visualization-Project/master/data/population-by-broad-age-group.csv"},
     "key":"properties.NAME",
-    "fields": ["Year","5 or under","5 to 14","15 to 24","25 to 64","65 or over"]    
+    "fields": ["Year","5_or_under","5_to_14","15_to_24","25_to_64","65_or_over"]    
 }
-    }
+    },
+    {
+  "calculate": "datum.5_or_under + datum.5_to_14 + datum.15_to_24 + datum.25_to_64 + datum.65_or_over","as": "Population"
+        }
     ],
     "mark": {
         "type":"area",
