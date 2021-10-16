@@ -1,7 +1,17 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
   "width": "container", "height": 300,
-  "data": {"url": "https://raw.githubusercontent.com/Sovathanak/Data-Visualization-Project/master/data/broad_age_world.csv"},
+  "data": {"url": "https://raw.githubusercontent.com/Sovathanak/Data-Visualization-Project/master/data/broad_age.csv"},
+  "transform": [
+  {
+  "lookup": "Year",
+  "from":{
+  "data":{"url": "https://raw.githubusercontent.com/Sovathanak/Data-Visualization-Project/master/data/population-by-broad-age-group.csv"},
+  "key":"Year",
+  "fields": ["5-under","5-to-14","15-to-24","25-to-64","65-over", "Population"]  
+}
+  }
+  ],
   "mark": {
       "type":"area",
       "tooltip":true,
@@ -10,13 +20,10 @@
 
   "encoding": {
     "x": {
-      "field": "Year", "type": "temporal",
-      "axis":{
-        "grid":false
-    }
+      "field": "Year"
     },
     "y": {
-      "field": "Population", 
+      "field": "Age pop", 
       "type": "quantitative"
       
     },
@@ -27,13 +34,13 @@
       "scale": {"range": ["#FF5E3C", "#71ADE7", "#4F5BFB", "#CA9EFF", "#6BCCC8"]}
     },
       "tooltip": [
-         {"field": "5 or under", "type": "quantitative", "format":","},
-         {"field": "5 to 14", "type": "quantitative", "format":","},
-         {"field": "15 to 24", "type": "quantitative", "format":","},
-         {"field": "25 to 64", "type": "quantitative", "format":","},
-         {"field": "65 or over", "type": "quantitative", "format":","},
-         {"field": "Total", "type": "quantitative", "format":",", "title": "Total Population"},
-         {"field": "Year", "timeUnit": "year","type": "temporal", "title": "Year"}
+         {"field": "5-under", "type": "quantitative", "format":","},
+         {"field": "5-to-14", "type": "quantitative", "format":","},
+         {"field": "15-to-24", "type": "quantitative", "format":","},
+         {"field": "25-to-64", "type": "quantitative", "format":","},
+         {"field": "65-over", "type": "quantitative", "format":","},
+         {"field": "Population", "type": "quantitative", "format":",", "title": "Total Population"},
+         {"field": "Year","title": "Year"}
        ]
   }
 }
