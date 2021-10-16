@@ -47,5 +47,12 @@
          {"field": "Population", "type": "quantitative", "format":",", "title": "Total Population"},
          {"field": "Year"}
        ]
+  },
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
   }
 }

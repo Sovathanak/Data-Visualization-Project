@@ -64,11 +64,11 @@
     "shape": {"field":"geo", "type":"geojson"},
     "color": {
       "field": "Density",
-      "type": "quantitative",
       "title": "Density (People/km²)", 
       "scale": {"type": "threshold",
                 "domain":[10, 50, 100, 500, 1000], 
-                "range":["#fed976", "#fd8d3c","#e31a1c", "#bd0026", "#800026"]}
+                "range":["#fed976", "#fd8d3c","#e31a1c", "#bd0026", "#800026"]},
+      "legend":{"orient": "bottom"}
     },
     "tooltip": [
       {"field": "Entity", "type": "nominal", "title": "Country"},
@@ -76,5 +76,12 @@
           ]
   }
   }
-]
+],
+"config": {
+  "style": {
+    "cell": {
+      "stroke": "transparent"
+    }
+  }
+}
 }

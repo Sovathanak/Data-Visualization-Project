@@ -166,5 +166,12 @@
     {"field": "Population", "type": "quantitative", "format": ","} ]
     }
     }
-    ]
+    ],
+    "config": {
+        "style": {
+          "cell": {
+            "stroke": "transparent"
+          }
+        }
+      }
    }
