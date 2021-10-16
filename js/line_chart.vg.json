@@ -2,7 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 400,
-  "title": "",
   "data": {
 "url": "https://raw.githubusercontent.com/Sovathanak/Data-Visualization-Project/master/data/grow_continent.csv"
   },
