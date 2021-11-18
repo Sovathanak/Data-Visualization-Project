@@ -118,7 +118,7 @@
   "mark": {
     "type": "text",
     "align": "left",
-    "baseline": "left",
+    "baseline": "middle",
     "dx": -90,
     "dy": 130
   },
